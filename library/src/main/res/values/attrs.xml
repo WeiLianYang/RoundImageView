@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright WeiLianYang
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <declare-styleable name="RoundImageView">
+
+        <!-- 圆角大小，如果只设置了此值，则默认会使用其作为所有圆角的值 -->
+        <attr name="riv_radius" format="dimension" />
+
+        <!-- 顶部左侧圆角大小 -->
+        <attr name="riv_topLeft_radius" format="dimension" />
+
+        <!-- 顶部右侧圆角大小 -->
+        <attr name="riv_topRight_radius" format="dimension" />
+
+        <!-- 底部左侧圆角大小 -->
+        <attr name="riv_bottomLeft_radius" format="dimension" />
+
+        <!-- 底部右侧圆角大小 -->
+        <attr name="riv_bottomRight_radius" format="dimension" />
+
+        <!-- 作为圆形图片，和 riv_radius 一起使用。
+             如果未设置 riv_radius，半径将取宽高最小值的一半 -->
+        <attr name="riv_roundAsCircle" format="boolean" />
+
+        <!-- 外边框颜色 -->
+        <attr name="riv_borderColor" format="color" />
+
+        <!-- 外边框宽度 -->
+        <attr name="riv_borderWidth" format="dimension" />
+
+    </declare-styleable>
+
+</resources>
