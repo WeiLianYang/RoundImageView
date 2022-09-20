@@ -50,8 +50,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@id/riv1"
-            app:riv_topLeft_radius="10dp"
-            app:riv_topRight_radius="10dp" />
+            app:riv_topLeft_radius="20dp"
+            app:riv_topRight_radius="20dp" />
 
         <com.william.widget.RoundImageView
             android:id="@+id/riv3"
@@ -96,10 +96,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@id/riv5"
-            app:riv_bottomLeft_radius="24dp"
-            app:riv_bottomRight_radius="12dp"
-            app:riv_topLeft_radius="4dp"
-            app:riv_topRight_radius="6dp" />
+            app:riv_bottomLeft_radius="32dp"
+            app:riv_bottomRight_radius="25dp"
+            app:riv_topLeft_radius="14dp"
+            app:riv_topRight_radius="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
