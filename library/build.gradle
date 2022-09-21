@@ -50,4 +50,4 @@ ext {
     libraryDescription = 'This library is used to set the rounded corners and outer border colors of the images'
 }
 
-apply from: 'publish.gradle'
+//apply from: 'publish.gradle'
