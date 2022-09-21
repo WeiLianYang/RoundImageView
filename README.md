@@ -12,7 +12,9 @@ buildscript {
         mavenCentral()
     }
 }
+```
 
+```groovy
 implementation 'io.github.weilianyang:RoundImageView:1.0.1'
 ```
 
