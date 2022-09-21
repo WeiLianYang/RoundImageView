@@ -13,7 +13,7 @@ buildscript {
     }
 }
 
-implementation 'io.github.weilianyang:RoundImageView:1.0.0'
+implementation 'io.github.weilianyang:RoundImageView:1.0.1'
 ```
 
 ### 效果预览：
