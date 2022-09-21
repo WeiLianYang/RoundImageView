@@ -146,7 +146,11 @@ class RoundImageView @JvmOverloads constructor(
                 borderPath.addRoundRect(borderRectF, radii, Path.Direction.CW)
 
                 if (halfBorderWidth > 0) {
-                    radii.forEachIndexed { index, f -> radii[index] = f + halfBorderWidth }
+                    radii.forEachIndexed { index, f ->
+                        if (f > 0) {
+                            radii[index] = f + halfBorderWidth
+                        }
+                    }
                 }
                 rectF.set(
                     paddingLeft.toFloat(),

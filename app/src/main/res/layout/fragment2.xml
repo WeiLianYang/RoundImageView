@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
   ~ Copyright WeiLianYang
   ~
@@ -36,10 +37,9 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:scaleType="centerCrop"
             android:src="@drawable/test1"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:riv_borderColor="#60ff0000"
             app:riv_borderWidth="10dp"
@@ -49,24 +49,25 @@
             android:id="@+id/riv2"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/test1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/riv1"
             app:riv_borderColor="#800000ff"
-            app:riv_borderWidth="20dp"
-            app:riv_roundAsCircle="true" />
+            app:riv_borderWidth="10dp"
+            app:riv_topLeft_radius="20dp"
+            app:riv_topRight_radius="20dp" />
 
         <com.william.widget.RoundImageView
             android:id="@+id/riv3"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/test1"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/riv1"
             app:riv_borderColor="#ff00ff"
             app:riv_borderWidth="10dp"
@@ -76,13 +77,13 @@
             android:id="@+id/riv4"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/test1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@id/riv3"
             app:riv_borderColor="#00ff00"
-            app:riv_borderWidth="20dp"
+            app:riv_borderWidth="10dp"
             app:riv_bottomLeft_radius="30dp"
             app:riv_topRight_radius="30dp" />
 
@@ -91,9 +92,9 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/riv3"
             app:riv_borderColor="#ff0000"
             app:riv_borderWidth="10dp"
@@ -103,14 +104,16 @@
             android:id="@+id/riv6"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
             android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@id/riv3"
+            app:layout_constraintTop_toTopOf="@+id/riv5"
             app:riv_borderColor="#ff00ff"
             app:riv_borderWidth="10dp"
-            app:riv_radius="30dp" />
+            app:riv_bottomLeft_radius="32dp"
+            app:riv_bottomRight_radius="25dp"
+            app:riv_topLeft_radius="14dp"
+            app:riv_topRight_radius="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

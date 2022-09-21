@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
   ~ Copyright WeiLianYang
   ~
@@ -63,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/riv2"
-            app:riv_radius="20dp" />
+            app:riv_radius="30dp" />
 
         <com.william.widget.RoundImageView
             android:id="@+id/riv4"
@@ -74,8 +75,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@id/riv3"
-            app:riv_bottomLeft_radius="24dp"
-            app:riv_topRight_radius="24dp" />
+            app:riv_bottomLeft_radius="30dp"
+            app:riv_topRight_radius="30dp" />
 
         <com.william.widget.RoundImageView
             android:id="@+id/riv5"
