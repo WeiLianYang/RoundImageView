@@ -7,15 +7,13 @@
 ### 添加依赖
 
 ```groovy
-buildscript {
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
 }
 ```
 
 ```groovy
-implementation 'io.github.weilianyang:RoundImageView:1.0.1'
+implementation 'io.github.weilianyang:RoundImageView:1.0.2'
 ```
 
 ### 效果预览：
@@ -107,5 +105,64 @@ implementation 'io.github.weilianyang:RoundImageView:1.0.1'
     app:riv_borderColor="#ff00ff"
     app:riv_borderWidth="5dp"
     app:riv_radius="1dp" />
+
+```
+
+### 四、在 代码 中使用
+
+#### 1. 指定圆角大小及边框样式
+```kotlin
+
+/**
+ * @param radius 圆角大小，当 asCircle 为 true 时，值作为圆形图片的半径，如果为0，则将取宽高最小值的一半
+ * @param borderWidth 外边框宽度
+ * @param borderColor 外边框颜色
+ * @param asCircle 作为圆形图片使用，默认 false
+ */
+fun setRadiusAndBorder(
+    radius: Float,
+    borderWidth: Float = 0f,
+    @ColorInt borderColor: Int = 0,
+    asCircle: Boolean = false,
+) {
+    this.radius = radius
+    this.borderWidth = borderWidth
+    this.borderColor = borderColor
+    this.roundAsCircle = asCircle
+
+    updateBorderPaint()
+}
+
+```
+
+
+#### 2. 分别指定4个圆角的大小及边框样式
+```kotlin
+
+/**
+ * @param topLeftRadius 顶部左侧圆角大小
+ * @param topRightRadius 顶部右侧圆角大小
+ * @param bottomLeftRadius 底部左侧圆角大小
+ * @param bottomRightRadius 底部右侧圆角大小
+ * @param borderWidth 外边框宽度
+ * @param borderColor 外边框颜色
+ */
+fun setRadiusAndBorder(
+    topLeftRadius: Float = 0f,
+    topRightRadius: Float = 0f,
+    bottomLeftRadius: Float = 0f,
+    bottomRightRadius: Float = 0f,
+    borderWidth: Float = 0f,
+    @ColorInt borderColor: Int = 0
+) {
+    this.topLeftRadius = topLeftRadius
+    this.topRightRadius = topRightRadius
+    this.bottomLeftRadius = bottomLeftRadius
+    this.bottomRightRadius = bottomRightRadius
+    this.borderWidth = borderWidth
+    this.borderColor = borderColor
+
+    updateBorderPaint()
+}
 
 ```
