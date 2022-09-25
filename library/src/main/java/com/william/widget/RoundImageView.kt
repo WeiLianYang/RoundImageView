@@ -20,13 +20,14 @@ package com.william.widget
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import androidx.annotation.ColorInt
 import androidx.appcompat.widget.AppCompatImageView
 
 
 /**
  * author : WilliamYang
  * date : 2022/9/18 14:54
- * description : 带圆角图片
+ * description : 可设置 圆角、外边框 的 ImageView
  *
  * 使用方式：
  *
@@ -182,6 +183,52 @@ class RoundImageView @JvmOverloads constructor(
             strokeWidth = borderWidth
             style = Paint.Style.STROKE
         }
+    }
+
+    /**
+     * @param radius 圆角大小，当 asCircle 为 true 时，值作为圆形图片的半径，如果为0，则将取宽高最小值的一半
+     * @param borderWidth 外边框宽度
+     * @param borderColor 外边框颜色
+     * @param asCircle 作为圆形图片使用，默认 false
+     */
+    fun setRadiusAndBorder(
+        radius: Float,
+        borderWidth: Float = 0f,
+        @ColorInt borderColor: Int = 0,
+        asCircle: Boolean = false,
+    ) {
+        this.radius = radius
+        this.borderWidth = borderWidth
+        this.borderColor = borderColor
+        this.roundAsCircle = asCircle
+
+        updateBorderPaint()
+    }
+
+    /**
+     * @param topLeftRadius 顶部左侧圆角大小
+     * @param topRightRadius 顶部右侧圆角大小
+     * @param bottomLeftRadius 底部左侧圆角大小
+     * @param bottomRightRadius 底部右侧圆角大小
+     * @param borderWidth 外边框宽度
+     * @param borderColor 外边框颜色
+     */
+    fun setRadiusAndBorder(
+        topLeftRadius: Float = 0f,
+        topRightRadius: Float = 0f,
+        bottomLeftRadius: Float = 0f,
+        bottomRightRadius: Float = 0f,
+        borderWidth: Float = 0f,
+        @ColorInt borderColor: Int = 0
+    ) {
+        this.topLeftRadius = topLeftRadius
+        this.topRightRadius = topRightRadius
+        this.bottomLeftRadius = bottomLeftRadius
+        this.bottomRightRadius = bottomRightRadius
+        this.borderWidth = borderWidth
+        this.borderColor = borderColor
+
+        updateBorderPaint()
     }
 
 }
